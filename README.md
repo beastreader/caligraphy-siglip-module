@@ -18,3 +18,33 @@ I used synthetic data using hand picked fonts and visualized them to have more d
 | Synthetic (Font Visualization) | 11,578 |
 | Handwritten Calligraphy | 2,250 |
 | **Total** | **13,300** |
+
+
+
+## Model Architecture
+
+Both encoders are implemented in `siglip_modules.py`:
+
+**Image Encoder**
+- Input: Greyscale images in shape `(B, 1, H, W)` where B is batch size
+- Output: Image embeddings
+
+**Text Encoder**
+- Input: Text sequences in shape `(B, L)` where L is sequence length
+- Text is mapped using the vocabulary mapper from `datasetimg.np` (access via `mapper` key)
+- Output: Text embeddings
+
+## Pre-trained Weights
+
+Model weights are saved in `SIGLIP.pt` as a PyTorch dictionary:
+
+```python
+checkpoint = torch.load('SIGLIP.pt')
+
+# Access components
+image_encoder_weights = checkpoint['Iencoder']
+text_encoder_weights = checkpoint['Tencoder']
+temperature = checkpoint['t_prime']  # learned temperature parameter
+bias = checkpoint['b']  # learned bias parameter
+optimizer_state = checkpoint['opti']  # for resuming training
+config = checkpoint['config']  # model configs (Iencoder, Tencoder)
