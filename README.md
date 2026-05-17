@@ -48,3 +48,35 @@ temperature = checkpoint['t_prime']  # learned temperature parameter
 bias = checkpoint['b']  # learned bias parameter
 optimizer_state = checkpoint['opti']  # for resuming training
 config = checkpoint['config']  # model configs (Iencoder, Tencoder)
+```
+## Results/Performance
+
+Just keep it simple. Add something like:
+
+```markdown
+## Performance
+
+The model successfully learns to align calligraphy images with their text representations, trained on:
+- 11k synthetic calligraphy images (font visualization)
+- 2.3k real handwritten samples
+
+The learned embeddings enable:
+- Image-to-text retrieval
+- Text-to-image matching
+- Calligraphy text recognition
+- Image-to-Image similarity
+
+```
+## Installation
+
+Clone the repository:
+```bash
+git clone https://github.com/beastreader/caligraphy-siglip-module.git
+cd caligraphy-siglip-module
+```
+
+
+## Contact
+
+Built by [@beastreader](https://github.com/beastreader)
+- Email: mahmoudgalal621@gmail.com
