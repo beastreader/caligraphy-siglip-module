@@ -19,7 +19,7 @@ To address data insufficiency, we augmented our dataset by synthesizing calligra
 | Handwritten Calligraphy | 2,000 |
 | **Total** | **13,578** |
 
-**Dataset Repository**: [ARBML/Calliar](https://github.com/ARBML/Calliar)
+**Authentic Dataset Repository**: [ARBML/Calliar](https://github.com/ARBML/Calliar)
 
 ## Model Architecture
 
@@ -53,8 +53,6 @@ config = checkpoint['config']  # model configs (Iencoder, Tencoder)
 
 
 ```markdown
-## Performance
-
 The model successfully learns to align calligraphy images with their text representations, trained on:
 - 11k synthetic calligraphy images (font visualization)
 - 2.3k real handwritten samples
