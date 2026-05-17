@@ -52,7 +52,7 @@ config = checkpoint['config']  # model configs (Iencoder, Tencoder)
 ## Results/Performance
 
 
-```markdown
+
 The model successfully learns to align calligraphy images with their text representations, trained on:
 - 11k synthetic calligraphy images (font visualization)
 - 2.3k real handwritten samples
@@ -63,7 +63,7 @@ The learned embeddings enable:
 - Calligraphy text recognition
 - Image-to-Image similarity
 
-```
+
 ## Installation
 
 Clone the repository:
