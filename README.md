@@ -12,14 +12,14 @@ This project demonstrates end-to-end deep learning for calligraphy recognition:
 - **Real-World Data**: Trained on both synthetic and authentic handwritten calligraphy
 
 ## 📊 Dataset
-I used synthetic data using hand picked fonts and visualized them to have more data with how much little real data i have.
+To address data insufficiency, we augmented our dataset by synthesizing calligraphy images from hand-picked fonts.
 | Source | Count |
 |--------|-------|
 | Synthetic (Font Visualization) | 11,578 |
-| Handwritten Calligraphy | 2,250 |
+| Handwritten Calligraphy | 2,000 |
 | **Total** | **13,300** |
 
-
+**Dataset Repository**: [ARBML/Calliar](https://github.com/ARBML/Calliar)
 
 ## Model Architecture
 
