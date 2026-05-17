@@ -17,7 +17,7 @@ To address data insufficiency, we augmented our dataset by synthesizing calligra
 |--------|-------|
 | Synthetic (Font Visualization) | 11,578 |
 | Handwritten Calligraphy | 2,000 |
-| **Total** | **13,300** |
+| **Total** | **13,578** |
 
 **Dataset Repository**: [ARBML/Calliar](https://github.com/ARBML/Calliar)
 
