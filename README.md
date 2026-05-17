@@ -51,7 +51,6 @@ config = checkpoint['config']  # model configs (Iencoder, Tencoder)
 ```
 ## Results/Performance
 
-Just keep it simple. Add something like:
 
 ```markdown
 ## Performance
