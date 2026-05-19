@@ -63,6 +63,9 @@ The learned embeddings enable:
 - Calligraphy text recognition
 - Image-to-Image similarity
 
+#Issues
+While testing abit i found out that the model has problem with arabic caligraphy with tashkeel and multiple words sentences, working on building another synthetic data to fix the issue
+
 
 ## Installation
 
