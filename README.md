@@ -36,31 +36,38 @@ Both encoders are implemented in `siglip_modules.py`:
 
 ## Pre-trained Weights
 
-Model weights are saved in `.pt` checkpoint files containing both standard and Exponential Moving Average (EMA) model states:
+Pre-trained weights are provided as two separate checkpoints: standard training weights (`SIGLIP_standard.pt`) and Exponential Moving Average weights (`SIGLIP_ema.pt`, recommended for evaluation/inference).
+
+### Loading Standard Weights
+```python
+import torch
+
+checkpoint = torch.load('SIGLIP_standard.pt')
+
+image_encoder_weights = checkpoint['Iencoder']
+text_encoder_weights = checkpoint['Tencoder']
+classification_head_weights = checkpoint['Chead']
+temperature = checkpoint['t_prime']  # learned temperature
+bias = checkpoint['b']  # learned bias
+config = checkpoint['config']
+
+```
+
+### Loading EMA Weights (Recommended for Inference)
 
 ```python
 import torch
 
-checkpoint = torch.load('checkpoint.pt')
+checkpoint = torch.load('SIGLIP_ema.pt')
 
-# Standard Model Weights
+# Directly loads the EMA-smoothed encoder and head weights
 image_encoder_weights = checkpoint['Iencoder']
 text_encoder_weights = checkpoint['Tencoder']
 classification_head_weights = checkpoint['Chead']
-temperature = checkpoint['t_prime']  # learned temperature parameter
-bias = checkpoint['b']  # learned bias parameter
+temperature = checkpoint['t_prime']
+bias = checkpoint['b']
+config = checkpoint['config']
 
-# EMA Model Weights (recommended for inference)
-ema_image_encoder_weights = checkpoint['ema_Iencoder']
-ema_text_encoder_weights = checkpoint['ema_Tencoder']
-ema_classification_head_weights = checkpoint['ema_Chead']
-ema_temperature = checkpoint['ema_t_prime']
-ema_bias = checkpoint['ema_b']
-
-# Training Metadata
-optimizer_state = checkpoint['opti']  # for resuming training
-step = checkpoint['step']  # training step count
-config = checkpoint['config']  # model configs (Iencoder, Chead, Tencoder)
 ```
 ## Results/Performance
 
