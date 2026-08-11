@@ -82,7 +82,7 @@ The learned embeddings enable:
 - Text-to-image matching
 - Calligraphy text recognition
 - Image-to-Image similarity
-##EDIT:
+## EDIT:
 UPDATED MODEL USING BETTER WAY TO TRAINING AND ADDED EMA , i found no big difference between ema and normal , i added augmentation and larger batch size for better learning since siglip scales with negatives compared to positives , and added caption head , and made its loss scaled up cause I care about per letter encoding too so i prioritized that letters are preserved as much as possible in embeddings i had better results , i will show later 
 ## Issues
 
