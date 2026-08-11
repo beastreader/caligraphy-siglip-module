@@ -85,9 +85,9 @@ While testing abit i found out that the model has problem with arabic caligraphy
 
 ##Images/results:
 
-![siglip_embedding_analysis](siglip_embedding_analysis) 
-![siglip_per_char](siglip_per_char) 
-![siglip_recall_curve](siglip_recall_curve)
+![siglip_embedding_analysis](siglip_embedding_analysis.png) 
+![siglip_per_char](siglip_per_char.png) 
+![siglip_recall_curve](siglip_recall_curve.png)
 
 
 these are after augs compared to the unaugmented one , and the ema of the auged one  
