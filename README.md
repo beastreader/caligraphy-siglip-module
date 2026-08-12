@@ -90,7 +90,7 @@ UPDATED MODEL USING BETTER WAY TO TRAINING AND ADDED EMA , i found no big differ
 While testing abit i found out that the model has problem with arabic caligraphy with tashkeel and multiple words sentences, working on building another synthetic data to fix the issue
 
 
-##Images/results:
+## Images/results:
 
 ![siglip_embedding_analysis](siglip_embedding_analysis.png) 
 ![siglip_per_char](siglip_per_char.png) 
